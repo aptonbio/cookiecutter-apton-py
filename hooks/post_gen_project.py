@@ -1,6 +1,24 @@
 #!/usr/bin/env python
 import json
+import os
 from pathlib import Path
+
+
+REMOVE_PATHS = [
+    '{% if cookiecutter.project_type != "bin" %} src/__main__.py {% endif %}',
+]
+
+
+def remove_optional_paths():
+    for path_str in REMOVE_PATHS:
+        path_str = path_str.strip()
+        if path_str:
+            path = Path(path_str)
+            if path.exists():
+                if path.isdir():
+                    os.rmdir(path)
+                else:
+                    path.unlink()
 
 
 def reindent_cookiecutter_json():
@@ -21,4 +39,5 @@ def reindent_cookiecutter_json():
 
 
 if __name__ == "__main__":
+    remove_optional_paths()
     reindent_cookiecutter_json()

@@ -1,13 +1,16 @@
 {
-  "project_name": "hypermodern-python",
+  "project_name": "apton-py",
+  "project_type": [
+    "lib",
+    "bin"
+  ],
   "package_name": "{{ cookiecutter.project_name.replace('-', '_') }}",
   "friendly_name": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
-  "author": "Claudio Jolowicz",
-  "email": "mail@claudiojolowicz.com",
-  "github_user": "cjolowicz",
-  "version": "0.0.0",
+  "author": "John Didion",
+  "email": "John.Didion@aptonbio.com",
+  "github_user": "jdidion",
+  "version": "0.1.0",
   "copyright_year": "{% now 'utc', '%Y' %}",
-  "license": ["MIT", "Apache-2.0", "GPL-3.0"],
   "development_status": [
     "Development Status :: 1 - Planning",
     "Development Status :: 2 - Pre-Alpha",
