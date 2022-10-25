@@ -15,7 +15,7 @@
 The first time using this template run:
 
 ```console
-$ cookiecutter gh:apton/cookiecutter-apton-py
+$ cookiecutter gh:aptonbio/cookiecutter-apton-py
 ```
 
 Subsequently you can run:
@@ -33,8 +33,8 @@ default_context:
   github_user: "jdidion"
   version: 0.1.0
 abbreviations:
-    apton: https://github.com/aptonbio/cookiecutter-apton-py.git
     gh: https://github.com/{0}.git
+    apton: cookiecutter-apton-py
 ```
 
 And then run:

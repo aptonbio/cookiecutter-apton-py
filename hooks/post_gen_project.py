@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 REMOVE_PATHS = [
-    '{% if cookiecutter.project_type != "bin" %} src/__main__.py {% endif %}',
+    '{% if cookiecutter.project_type != "bin" -%} src/{{ cookiecutter.package_name }}/__main__.py {%- endif -%}',
 ]
 
 
@@ -15,7 +15,7 @@ def remove_optional_paths():
         if path_str:
             path = Path(path_str)
             if path.exists():
-                if path.isdir():
+                if path.is_dir():
                     os.rmdir(path)
                 else:
                     path.unlink()
